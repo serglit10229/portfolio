@@ -17,16 +17,19 @@ API and Libraries: Unreal Engine 4/5, Unity 2021.2, Oculus (OpenXR), SteamVR, GL
 ## Full-body Tracking UE4 SDK + Demo Games
 ![KR1](KR1.gif)  
 Tasked to create a communication protocol between Unreal Engine 4 game/application and Kinetic Reality Proprietary full-body motion tracking hardware on local WIFI network. 
-Developed a UDP packet writing/reading SDK in native C++ for extemely low latency comunication with KR sensors on LAN. 
-Helped with development and debugging of hardware-side UDP communication code.
-Developed a custom sockets plugin using UE4 FSocket API to employ cross-platform abilities. 
-Optimized and maintained the plugin for use in Android-based builds to support Meta Quest 1/2 wireless VR headsets.
-Implemented simple Blueprint and C++ components for fast and scalable development of games/apps that want to use full-body tracking on Skeletal Mesh and Static Mesh systems with physics adjusted to simulate a character standing on their feet and inverse-kinematics calculation methods.
+* Developed a UDP packet reading/writing SDK in native C++ for low-latency communication with KR sensors on LAN
+* Assisted in hardware-side UDP communication code development and debugging
+* Created a custom sockets plugin using UE4 FSocket API with cross-platform capabilities
+* Optimized and maintained the plugin for use in Android-based builds for Meta Quest 1/2 wireless VR headsets
+* Implemented Blueprint and C++ components for quick and scalable development of games/apps utilizing full-body tracking on Skeletal Mesh and Static Mesh systems
+* Included physics adjustment to simulate a character standing on their feet and used inverse-kinematics calculation methods.
+
 ![KR2](KR2.gif)
 
-Developed two standalone VR games using UE4 and the KR SDK for internal testing and tech demonstations.
-KR Tennis features realistic tennis ball and racquet physics, simulated in real-time on one or multiple Quest VR Headsets. Demonstrates the ability of KR hardware to support low-latency applications and tollerance to fast-accelerating movements. Allows for useful biomechanics analysis to be completed on the recorded(or in realtime) player movements. Demonstrates KR hardware's support for muitple simuoultaniuons users in the same sensor-area network, allowing multiplayer tennis matches.
-KR Combat features an arcade PvE and PvP martial arts fighting simulator. Fun demo game made for intended for shows and conferences like GDC 2023. The main obstacle with the initial idea was force feedback and visualization of damage on players. Since this is a game in "virtual" reality, players dont actually hit each other physically as they can be playing together on different continents. But to make the experiecen feel somewhat realistic and fun, I designed and implemented a simple vfx feedback emulation that separated the physical model of the character from the skeletal mesh binded to the KR sensors.  
+Developed two standalone VR games using UE4 and the KR SDK for internal testing and tech demonstrations
+* KR Tennis features realistic tennis ball and racquet physics, demonstrating the KR hardware's low-latency support and tolerance for fast-accelerating movements. Allows biomechanics analysis to be performed on recorded or real-time player movements, and supports multiplayer matches
+* KR Combat is an arcade martial arts fighting simulator for PvE and PvP, designed for shows and conferences like GDC 2023. Designed and implemented a simple VFX feedback emulation to simulate force feedback and visualization of damage in the virtual environment, as players do not physically hit each other.
+
 ![KR3](KR3.png)  
 
 
@@ -35,28 +38,41 @@ As a part of KR Combat demo, I was tasked to create a PvE game mode with a simpl
 
 ![Pathfinding1](Pathfinding1.gif)
 
-I created a native implemention of A* grid-based pathfinding algorithm. The demo demonstrates dynamically-generated obstacles that can be created in editor or at runtime. The navigation manager finds the best path from point A(yellow) to point B(red) and outputs the path with locations of grid squares. The Green sphere than retraces the path for visualization. This algorithm successfully navigated the AI in KR Combat game and ran on Quest 2 to complement a fun VR demo.
-
-
-
+* Created a native implementation of the A* grid-based pathfinding algorithm
+* Demonstrates dynamically generated obstacles that can be created in the editor or at runtime
+* Navigation manager finds the best path from point A to point B and outputs the path with grid square locations. Then, retraces the path for visualization
+* Successfully implemented the algorithm for AI navigation in KR Combat game and ran on Quest 2 for a fun VR demo.
 
 ## Custom Voxel Destruction System Experiment
+Created a voxel-based destruction system designed for 60fps games, that can be changed or created at runtime, and is scalable. The system is designed to run faster than UE4/5's built-in Chaos destruction.
+
 ![Destruction(Single)](Destruction(Single).gif)
 
-The goal was to create a voxel-based destruction system that would run faster than UE4/5's built-in Chaos destruction, can be changed or created at runtime and be scalable for 60fps games, not just rendered movie pipelines. The demo creates a multi-story building, made out of instanced triangular chunks(33,000+). If the building recieves damage abve certain threshold, all chunks within a specified radius from the impact location will be destroye, creating a hole. The system is fully scalable and can support multiple buildings on the same level with up to 2 million chunks in each. The buildings can also be made out of irregular chunks like glass, have different materials, and have a completely abstract shape. In 90% of all possible cases, the entire algorithm runs under 5ms(asynchronyously) even with 30 million chunks in the level.
+* Demonstrates a multi-story building made out of instanced triangular chunks, with over 33,000 chunks
+* When the building receives damage above a certain threshold, all chunks within a specified radius from the impact location are destroyed, creating a hole
+* The system is scalable, supporting multiple buildings on the same level with up to 2 million chunks each
+* The system can be used for irregular chunks like glass, with different materials and abstract shapes
+* In 90% of cases, the entire algorithm runs asynchronously in under 5ms, even with 30 million chunks in the level.
 
 ![Destruction(Total)](Destruction(Total).gif)
 
-An island-searching algorithm will then determine if any part of the building is no longer connected to the sny neightbor components and, therefore, needs to be destroyed too. This is needed to avoid having large parts of a building just hovering in the air. I'm currently using this system, updated with cool VFX in another personal project on movable vehicles.
+* Implemented an island-searching algorithm to determine if any part of a building is no longer connected to the neighbor components and needs to be destroyed
+* Helps prevent large parts of a building from hovering in the air
+* Updated with cool VFX and is being used in another personal project on movable vehicles.
 
 
 ## Schuco Animation Kit
-Tasked to initialize, develop, and deliver a complete software package for 3D model animation and for visualization and presentation. Allows people without prior experience in animation to create simple assembly/disassembly animated videos of their 3D models. Used by engineers and managers to visualize products and simplifiy the manufacturing and training processes. 
+Tasked to initialize, develop, and deliver a complete software package for 3D model animation and for visualization and presentation. Allows people without prior experience in animation to create simple assembly/disassembly animated videos of their 3D models.
 
 <img width="500" src="SAK1.png">      <img width="500" src="SAK2.png">
+* Intended for use by people without prior experience in animation
+* Designed for engineers and managers to visualize products and simplify manufacturing and training processes.
+
 <img src="SAK3.png">
 
+* Utilized Unreal Engine’s real-time rendering backend and proprietary engineering solutions to create real-time animation rendering
+* Led the development of UI/UX, frontend, and backend systems for the software package
+* Shipped a complete desktop tool that can be used both within and outside of Schuco International Engineering departments
 
-We utilized Unreal Engine’s real-time rendering backend and proprietary engineering solutions to create real-time animation rendering. Led development of UI/UX, frontend and backend systems. Shipped a complete desktop tool for use within and outside of Schuco International Engineering departments.
 
 
