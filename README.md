@@ -42,15 +42,21 @@ I created a native implemention of A* grid-based pathfinding algorithm. The demo
 
 ## Custom Voxel Destruction System Experiment
 ![Destruction(Single)](Destruction(Single).gif)
+
 The goal was to create a voxel-based destruction system that would run faster than UE4/5's built-in Chaos destruction, can be changed or created at runtime and be scalable for 60fps games, not just rendered movie pipelines. The demo creates a multi-story building, made out of instanced triangular chunks(33,000+). If the building recieves damage abve certain threshold, all chunks within a specified radius from the impact location will be destroye, creating a hole. The system is fully scalable and can support multiple buildings on the same level with up to 2 million chunks in each. The buildings can also be made out of irregular chunks like glass, have different materials, and have a completely abstract shape. In 90% of all possible cases, the entire algorithm runs under 5ms(asynchronyously) even with 30 million chunks in the level.
 
 ![Destruction(Total)](Destruction(Total).gif)
+
 An island-searching algorithm will then determine if any part of the building is no longer connected to the sny neightbor components and, therefore, needs to be destroyed too. This is needed to avoid having large parts of a building just hovering in the air. I'm currently using this system, updated with cool VFX in another personal project on movable vehicles.
 
 
 ## Schuco Animation Kit
 Tasked to initialize, develop, and deliver a complete software package for 3D model animation and for visualization and presentation. Allows people without prior experience in animation to create simple assembly/disassembly animated videos of their 3D models. Used by engineers and managers to visualize products and simplifiy the manufacturing and training processes. 
-![SAK1](SAK1.png)![SAK2](SAK2.png)![SAK3](SAK3.png)
-We utiilized Unreal Engine’s real-time rendering backend and proprietary engineering solutions to create real-time animation rendering. Led development of UI/UX, frontend and backend systems. Shipped a complete desktop tool for use within and outside of Schuco International Engineering departments.
+
+<img width="500" src="SAK1.png">      <img width="500" src="SAK2.png">
+<img src="SAK3.png">
+
+
+We utilized Unreal Engine’s real-time rendering backend and proprietary engineering solutions to create real-time animation rendering. Led development of UI/UX, frontend and backend systems. Shipped a complete desktop tool for use within and outside of Schuco International Engineering departments.
 
 
