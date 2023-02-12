@@ -22,7 +22,7 @@ Helped with development and debugging of hardware-side UDP communication code.
 Developed a custom sockets plugin using UE4 FSocket API to employ cross-platform abilities. 
 Optimized and maintained the plugin for use in Android-based builds to support Meta Quest 1/2 wireless VR headsets.
 Implemented simple Blueprint and C++ components for fast and scalable development of games/apps that want to use full-body tracking on Skeletal Mesh and Static Mesh systems with physics adjusted to simulate a character standing on their feet and inverse-kinematics calculation methods.
-![KR2_1](KR2_1.gif) ![KR2_2](KR2_2.gif)
+![KR2](KR2.gif)
 
 Developed two standalone VR games using UE4 and the KR SDK for internal testing and tech demonstations.
 KR Tennis features realistic tennis ball and racquet physics, simulated in real-time on one or multiple Quest VR Headsets. Demonstrates the ability of KR hardware to support low-latency applications and tollerance to fast-accelerating movements. Allows for useful biomechanics analysis to be completed on the recorded(or in realtime) player movements. Demonstrates KR hardware's support for muitple simuoultaniuons users in the same sensor-area network, allowing multiplayer tennis matches.
