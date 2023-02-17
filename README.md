@@ -33,15 +33,6 @@ Developed two standalone VR games using UE4 and the KR SDK for internal testing 
 ![KR3](KR3.png)  
 
 
-## Simple A* Pathfinding implementation
-As a part of KR Combat demo, I was tasked to create a PvE game mode with a simple AI that would run around the level and/or chase the player and apply damage via pre-determined animated moves. I experimented with a lighter(for Quests) navigation system than what UE4/5's built in AI system. 
-
-![Pathfinding1](Pathfinding1.gif)
-
-* Created a native implementation of the A* grid-based pathfinding algorithm
-* Demonstrates dynamically generated obstacles that can be created in the editor or at runtime
-* Navigation manager finds the best path from point A to point B and outputs the path with grid square locations. Then, retraces the path for visualization
-* Successfully implemented the algorithm for AI navigation in KR Combat game and ran on Quest 2 for a fun VR demo.
 
 ## Custom Voxel Destruction System Experiment
 Created a voxel-based destruction system designed for 60fps games, that can be changed or created at runtime, and is scalable. The system is designed to run faster than UE4/5's built-in Chaos destruction.
@@ -61,6 +52,7 @@ Created a voxel-based destruction system designed for 60fps games, that can be c
 * Updated with cool VFX and is being used in another personal project on movable vehicles.
 
 
+
 ## Schuco Animation Kit
 Tasked to initialize, develop, and deliver a complete software package for 3D model animation and for visualization and presentation. Allows people without prior experience in animation to create simple assembly/disassembly animated videos of their 3D models.
 
@@ -75,4 +67,14 @@ Tasked to initialize, develop, and deliver a complete software package for 3D mo
 * Shipped a complete desktop tool that can be used both within and outside of Schuco International Engineering departments
 
 
+
+## Simple A* Pathfinding implementation
+As a part of KR Combat demo, I was tasked to create a PvE game mode with a simple AI that would run around the level and/or chase the player and apply damage via pre-determined animated moves. I experimented with a lighter(for Quests) navigation system than what UE4/5's built in AI system. 
+
+![Pathfinding1](Pathfinding1.gif)
+
+* Created a native implementation of the A* grid-based pathfinding algorithm
+* Demonstrates dynamically generated obstacles that can be created in the editor or at runtime
+* Navigation manager finds the best path from point A to point B and outputs the path with grid square locations. Then, retraces the path for visualization
+* Successfully implemented the algorithm for AI navigation in KR Combat game and ran on Quest 2 for a fun VR demo.
 
