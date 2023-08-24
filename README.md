@@ -14,6 +14,13 @@ API and Libraries: Unreal Engine 4/5, Unity 2021.2, Oculus (OpenXR), SteamVR, GL
 
 
 
+## Microsoft Project AirSim
+![Airsim](Airsim.png)  
+* Contributed to the development of the new simulation platform. Ensured the precise modeling of air and ground vehicles behaviors, guaranteeing an accurate simulation with real-world dynamics.
+* Created realistic virtual environments for testing and experimentation. Focused on optimizing to ensure smooth and realistic interaction, aligning with accurate GIS data.
+* Led the creation of custom tools for our simulation platform. Streamlined various aspects of simulation setup, data collection, and analysis, empowering the team to efficiently iterate on AI algorithms and autonomous systems.
+
+
 ## Full-body Tracking UE4 SDK + Demo Games
 ![KR1](KR1.gif)  
 Tasked to create a communication protocol between Unreal Engine 4 game/application and Kinetic Reality Proprietary full-body motion tracking hardware on local WIFI network. 
